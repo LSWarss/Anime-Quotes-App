@@ -11,12 +11,25 @@ protocol QuotesService {
     func fetchRandomQuotes() async throws -> [Quote]
 }
 
-final class QuotesServiceImpl: QuotesService {
+struct QuotesServiceImpl: QuotesService {
+    
+    enum QuoteServiceError: Error {
+        case failed
+        case failedToDecode
+        case invalidStatusCode
+    }
     
     func fetchRandomQuotes() async throws -> [Quote] {
-        let urlSession = URLSession.shared
         let url = URL(string: APIConstants.baseUrl.appending("/api/quotes"))
-        let (data, _) = try await urlSession.data(from: url!)
-        return try JSONDecoder().decode([Quote].self, from: data)
+        
+        let (data, response) = try await URLSession.shared.data(from: url!)
+        
+        guard let response = response as? HTTPURLResponse,
+              response.statusCode == 200 else {
+                  throw QuoteServiceError.invalidStatusCode
+              }
+        
+        let decodedData = try JSONDecoder().decode([Quote].self, from: data)
+        return decodedData
     }
 }

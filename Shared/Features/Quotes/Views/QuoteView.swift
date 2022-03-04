@@ -26,8 +26,8 @@ struct QuoteView: View {
             Text(makeAttributedString(title: "Quotes",
                                       label: item.quote))
         }
-               .padding()
-               .foregroundColor(.black)
+        .padding()
+        .foregroundColor(.black)
     }
 }
 

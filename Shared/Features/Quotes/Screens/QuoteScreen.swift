@@ -9,22 +9,46 @@ import SwiftUI
 
 struct QuoteScreen: View {
     
-    @StateObject private var vm = QuotesViewModelImpl(quotesService: QuotesServiceImpl())
+    @StateObject private var vm = QuotesViewModelImpl(
+        quotesService: QuotesServiceImpl())
     
     var body: some View {
-        Group {
-            if vm.quotes.isEmpty {
+        NavigationView {
+            switch vm.state {
+            case .loading:
                 LoadingView(text: "Fetching Quotes")
-            } else {
+            case .success(let data):
                 List {
-                    ForEach(vm.quotes, id: \.anime) { item in
-                        QuoteView(item: item)
+                    ForEach(data, id: \.anime) { item in
+                        NavigationLink {
+                            
+                        } label: {
+                            QuoteView(item: item)
+                        }
                     }
                 }
+                .listStyle(.plain)
+                .navigationTitle("Quotes")
+            default:
+                EmptyView()
             }
         }
         .task {
             await vm.getRandomQuotes()
+        }
+        .alert("Error",
+               isPresented: $vm.hasError,
+               presenting: vm.state) { detail in
+            
+            Button("Retry") {
+                Task {
+                    await vm.getRandomQuotes()
+                }
+            }
+        } message: { detail in
+            if case let .failed(error) = detail {
+                Text(error.localizedDescription)
+            }
         }
     }
 }
