@@ -7,21 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A058580927D1EA2F007EDE73 /* Anime_QuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857F927D1EA2F007EDE73 /* Anime_QuotesApp.swift */; };
-		A058580A27D1EA2F007EDE73 /* Anime_QuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857F927D1EA2F007EDE73 /* Anime_QuotesApp.swift */; };
-		A058580B27D1EA2F007EDE73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857FA27D1EA2F007EDE73 /* ContentView.swift */; };
-		A058580C27D1EA2F007EDE73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857FA27D1EA2F007EDE73 /* ContentView.swift */; };
+		A058580927D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857F927D1EA2F007EDE73 /* AnimeQuotesApp.swift */; };
+		A058580A27D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05857F927D1EA2F007EDE73 /* AnimeQuotesApp.swift */; };
 		A058580D27D1EA2F007EDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05857FB27D1EA2F007EDE73 /* Assets.xcassets */; };
 		A058580E27D1EA2F007EDE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05857FB27D1EA2F007EDE73 /* Assets.xcassets */; };
+		A058581927D1EA5D007EDE73 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058581827D1EA5D007EDE73 /* APIConstants.swift */; };
+		A058581A27D1EA5F007EDE73 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058581827D1EA5D007EDE73 /* APIConstants.swift */; };
+		A058581E27D1EB2D007EDE73 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058581D27D1EB2D007EDE73 /* Quote.swift */; };
+		A058581F27D1EB2D007EDE73 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058581D27D1EB2D007EDE73 /* Quote.swift */; };
+		A058582327D1EC3C007EDE73 /* QuoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582227D1EC3C007EDE73 /* QuoteScreen.swift */; };
+		A058582427D1EC3C007EDE73 /* QuoteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582227D1EC3C007EDE73 /* QuoteScreen.swift */; };
+		A058582727D1EE02007EDE73 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582627D1EE02007EDE73 /* QuoteView.swift */; };
+		A058582827D1EE02007EDE73 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582627D1EE02007EDE73 /* QuoteView.swift */; };
+		A058582B27D1EEE6007EDE73 /* QoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582A27D1EEE6007EDE73 /* QoutesService.swift */; };
+		A058582C27D1EEE6007EDE73 /* QoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582A27D1EEE6007EDE73 /* QoutesService.swift */; };
+		A058582F27D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582E27D1EF8F007EDE73 /* QuotesViewModel.swift */; };
+		A058583027D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058582E27D1EF8F007EDE73 /* QuotesViewModel.swift */; };
+		A058583327D1F296007EDE73 /* IteoLogger in Frameworks */ = {isa = PBXBuildFile; productRef = A058583227D1F296007EDE73 /* IteoLogger */; };
+		A058583B27D1F609007EDE73 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058583A27D1F609007EDE73 /* LoadingView.swift */; };
+		A058583C27D1F609007EDE73 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058583A27D1F609007EDE73 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A05857F927D1EA2F007EDE73 /* Anime_QuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime_QuotesApp.swift; sourceTree = "<group>"; };
-		A05857FA27D1EA2F007EDE73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A05857F927D1EA2F007EDE73 /* AnimeQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeQuotesApp.swift; sourceTree = "<group>"; };
 		A05857FB27D1EA2F007EDE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A058580027D1EA2F007EDE73 /* Anime-Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anime-Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A058580627D1EA2F007EDE73 /* Anime-Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Anime-Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A058580827D1EA2F007EDE73 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		A058581827D1EA5D007EDE73 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		A058581D27D1EB2D007EDE73 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		A058582227D1EC3C007EDE73 /* QuoteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteScreen.swift; sourceTree = "<group>"; };
+		A058582627D1EE02007EDE73 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		A058582A27D1EEE6007EDE73 /* QoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QoutesService.swift; sourceTree = "<group>"; };
+		A058582E27D1EF8F007EDE73 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		A058583A27D1F609007EDE73 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A058583327D1F296007EDE73 /* IteoLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +74,10 @@
 		A05857F827D1EA2F007EDE73 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				A05857F927D1EA2F007EDE73 /* Anime_QuotesApp.swift */,
-				A05857FA27D1EA2F007EDE73 /* ContentView.swift */,
+				A058583427D1F596007EDE73 /* Base */,
+				A058581B27D1EB0F007EDE73 /* Features */,
+				A058581727D1EA51007EDE73 /* Constants */,
+				A05857F927D1EA2F007EDE73 /* AnimeQuotesApp.swift */,
 				A05857FB27D1EA2F007EDE73 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -78,6 +100,98 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		A058581727D1EA51007EDE73 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A058581827D1EA5D007EDE73 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A058581B27D1EB0F007EDE73 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A058581C27D1EB1A007EDE73 /* Quotes */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A058581C27D1EB1A007EDE73 /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				A058582D27D1EF79007EDE73 /* ViewModel */,
+				A058582927D1EED6007EDE73 /* Service */,
+				A058582527D1EDEE007EDE73 /* Views */,
+				A058582127D1EC2F007EDE73 /* Screens */,
+				A058582027D1EC27007EDE73 /* Model */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		A058582027D1EC27007EDE73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A058581D27D1EB2D007EDE73 /* Quote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A058582127D1EC2F007EDE73 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A058582227D1EC3C007EDE73 /* QuoteScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A058582527D1EDEE007EDE73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A058582627D1EE02007EDE73 /* QuoteView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A058582927D1EED6007EDE73 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A058582A27D1EEE6007EDE73 /* QoutesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A058582D27D1EF79007EDE73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A058582E27D1EF8F007EDE73 /* QuotesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A058583427D1F596007EDE73 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A058583527D1F5EC007EDE73 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A058583527D1F5EC007EDE73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A058583627D1F5F3007EDE73 /* Loading */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A058583627D1F5F3007EDE73 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				A058583A27D1F609007EDE73 /* LoadingView.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +208,9 @@
 			dependencies = (
 			);
 			name = "Anime-Quotes (iOS)";
+			packageProductDependencies = (
+				A058583227D1F296007EDE73 /* IteoLogger */,
+			);
 			productName = "Anime-Quotes (iOS)";
 			productReference = A058580027D1EA2F007EDE73 /* Anime-Quotes.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +259,9 @@
 				Base,
 			);
 			mainGroup = A05857F327D1EA2E007EDE73;
+			packageReferences = (
+				A058583127D1F296007EDE73 /* XCRemoteSwiftPackageReference "IteoLogger" */,
+			);
 			productRefGroup = A058580127D1EA2F007EDE73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,8 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A058580B27D1EA2F007EDE73 /* ContentView.swift in Sources */,
-				A058580927D1EA2F007EDE73 /* Anime_QuotesApp.swift in Sources */,
+				A058582327D1EC3C007EDE73 /* QuoteScreen.swift in Sources */,
+				A058582B27D1EEE6007EDE73 /* QoutesService.swift in Sources */,
+				A058582727D1EE02007EDE73 /* QuoteView.swift in Sources */,
+				A058581E27D1EB2D007EDE73 /* Quote.swift in Sources */,
+				A058582F27D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */,
+				A058580927D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */,
+				A058581927D1EA5D007EDE73 /* APIConstants.swift in Sources */,
+				A058583B27D1F609007EDE73 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A058580C27D1EA2F007EDE73 /* ContentView.swift in Sources */,
-				A058580A27D1EA2F007EDE73 /* Anime_QuotesApp.swift in Sources */,
+				A058582427D1EC3C007EDE73 /* QuoteScreen.swift in Sources */,
+				A058582C27D1EEE6007EDE73 /* QoutesService.swift in Sources */,
+				A058582827D1EE02007EDE73 /* QuoteView.swift in Sources */,
+				A058581F27D1EB2D007EDE73 /* Quote.swift in Sources */,
+				A058583027D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */,
+				A058580A27D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */,
+				A058581A27D1EA5F007EDE73 /* APIConstants.swift in Sources */,
+				A058583C27D1F609007EDE73 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +584,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A058583127D1F296007EDE73 /* XCRemoteSwiftPackageReference "IteoLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/psredzinski/IteoLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A058583227D1F296007EDE73 /* IteoLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A058583127D1F296007EDE73 /* XCRemoteSwiftPackageReference "IteoLogger" */;
+			productName = IteoLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A05857F427D1EA2E007EDE73 /* Project object */;
 }

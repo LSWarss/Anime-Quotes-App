@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "IteoLogger",
+        "repositoryURL": "https://github.com/psredzinski/IteoLogger",
+        "state": {
+          "branch": null,
+          "revision": "8ba771ad4f7b61bd0097ec5a4efa77ca9eef1bfb",
+          "version": "1.0.13"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
