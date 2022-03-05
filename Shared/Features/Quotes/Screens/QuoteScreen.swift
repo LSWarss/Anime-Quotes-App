@@ -32,7 +32,9 @@ struct QuoteScreen: View {
                 .navigationTitle("Quotes")
                 .toolbar {
                     Button("Log Out") {
-                        authenticator.updateValidation(success: false)
+                        withAnimation {
+                            authenticator.updateValidation(success: false)
+                        }
                     }
                 }
             default:

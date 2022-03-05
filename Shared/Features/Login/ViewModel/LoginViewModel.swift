@@ -11,6 +11,7 @@ protocol LoginViewModel: ObservableObject {
     var loginDisabled: Bool { get }
     var hasError: Bool { get }
     func login() async -> Bool
+    func setFailure(with error: Error)
 }
 
 final class LoginViewModelImpl : LoginViewModel {
@@ -23,8 +24,9 @@ final class LoginViewModelImpl : LoginViewModel {
     }
     
     @Published private(set) var state: State = .na
-    @Published var hasError: Bool = false
+    @Published var hasError = false
     @Published var credentials = Credentials()
+    @Published var storeCredentialsNext = true  
     
     private let authService: AuthService
     
@@ -36,20 +38,37 @@ final class LoginViewModelImpl : LoginViewModel {
         self.authService = authService
     }
     
-    func login() async -> Bool {
+    func setFailure(with error: Error) {
+        DispatchQueue.main.async {
+            self.state = .failed(error: error)
+        }
+    }
     
-        self.state = .loading
-        self.hasError = false
-        
+    func login() async -> Bool {
+        DispatchQueue.main.async {
+            self.state = .loading
+            self.hasError = false
+        }
         do {
             let auth = try await authService.login(with: self.credentials)
-            DispatchQueue.main.async {
+            
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                if self.storeCredentialsNext {
+                    if KeychainStorage.saveCredentials(self.credentials) {
+                        self.storeCredentialsNext = false
+                    }
+                }
                 self.state = .success
             }
             return auth
         } catch {
-            self.state = .failed(error: error)
-            self.hasError = true
+            DispatchQueue.main.async {
+                self.state = .failed(error: error)
+                self.hasError = true
+            }
         }
         
         return false
