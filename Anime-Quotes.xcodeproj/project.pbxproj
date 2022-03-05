@@ -28,6 +28,16 @@
 		A058583C27D1F609007EDE73 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058583A27D1F609007EDE73 /* LoadingView.swift */; };
 		A058583E27D2070E007EDE73 /* PagingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058583D27D2070E007EDE73 /* PagingData.swift */; };
 		A058583F27D2070E007EDE73 /* PagingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058583D27D2070E007EDE73 /* PagingData.swift */; };
+		A058584427D3410A007EDE73 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058584327D3410A007EDE73 /* Credentials.swift */; };
+		A058584527D3410A007EDE73 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058584327D3410A007EDE73 /* Credentials.swift */; };
+		A058584927D34164007EDE73 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058584827D34164007EDE73 /* AuthService.swift */; };
+		A058584A27D34164007EDE73 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058584827D34164007EDE73 /* AuthService.swift */; };
+		A058585127D34439007EDE73 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585027D34439007EDE73 /* LoginViewModel.swift */; };
+		A058585227D34439007EDE73 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585027D34439007EDE73 /* LoginViewModel.swift */; };
+		A058585527D34760007EDE73 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585427D34760007EDE73 /* LoginScreen.swift */; };
+		A058585627D34760007EDE73 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585427D34760007EDE73 /* LoginScreen.swift */; };
+		A058585927D34B58007EDE73 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585827D34B58007EDE73 /* AuthenticationViewModel.swift */; };
+		A058585A27D34B58007EDE73 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A058585827D34B58007EDE73 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,11 @@
 		A058582E27D1EF8F007EDE73 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		A058583A27D1F609007EDE73 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A058583D27D2070E007EDE73 /* PagingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingData.swift; sourceTree = "<group>"; };
+		A058584327D3410A007EDE73 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		A058584827D34164007EDE73 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		A058585027D34439007EDE73 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A058585427D34760007EDE73 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		A058585827D34B58007EDE73 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +129,7 @@
 		A058581B27D1EB0F007EDE73 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A058584127D340FA007EDE73 /* Login */,
 				A058581C27D1EB1A007EDE73 /* Quotes */,
 			);
 			path = Features;
@@ -174,6 +190,7 @@
 		A058583427D1F596007EDE73 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A058585727D34B44007EDE73 /* ViewModels */,
 				A058584027D20718007EDE73 /* Model */,
 				A058583527D1F5EC007EDE73 /* Views */,
 			);
@@ -202,6 +219,57 @@
 				A058583D27D2070E007EDE73 /* PagingData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A058584127D340FA007EDE73 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A058585327D346FB007EDE73 /* Screens */,
+				A058584F27D3442D007EDE73 /* ViewModel */,
+				A058584727D34157007EDE73 /* Service */,
+				A058584227D340FF007EDE73 /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A058584227D340FF007EDE73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A058584327D3410A007EDE73 /* Credentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A058584727D34157007EDE73 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A058584827D34164007EDE73 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A058584F27D3442D007EDE73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A058585027D34439007EDE73 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A058585327D346FB007EDE73 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A058585427D34760007EDE73 /* LoginScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A058585727D34B44007EDE73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A058585827D34B58007EDE73 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +378,14 @@
 			files = (
 				A058582327D1EC3C007EDE73 /* QuoteScreen.swift in Sources */,
 				A058582B27D1EEE6007EDE73 /* QoutesService.swift in Sources */,
+				A058584427D3410A007EDE73 /* Credentials.swift in Sources */,
 				A058582727D1EE02007EDE73 /* QuoteView.swift in Sources */,
 				A058581E27D1EB2D007EDE73 /* Quote.swift in Sources */,
+				A058585927D34B58007EDE73 /* AuthenticationViewModel.swift in Sources */,
+				A058584927D34164007EDE73 /* AuthService.swift in Sources */,
 				A058582F27D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */,
+				A058585527D34760007EDE73 /* LoginScreen.swift in Sources */,
+				A058585127D34439007EDE73 /* LoginViewModel.swift in Sources */,
 				A058580927D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */,
 				A058583E27D2070E007EDE73 /* PagingData.swift in Sources */,
 				A058581927D1EA5D007EDE73 /* APIConstants.swift in Sources */,
@@ -326,9 +399,14 @@
 			files = (
 				A058582427D1EC3C007EDE73 /* QuoteScreen.swift in Sources */,
 				A058582C27D1EEE6007EDE73 /* QoutesService.swift in Sources */,
+				A058584527D3410A007EDE73 /* Credentials.swift in Sources */,
 				A058582827D1EE02007EDE73 /* QuoteView.swift in Sources */,
 				A058581F27D1EB2D007EDE73 /* Quote.swift in Sources */,
+				A058585A27D34B58007EDE73 /* AuthenticationViewModel.swift in Sources */,
+				A058584A27D34164007EDE73 /* AuthService.swift in Sources */,
 				A058583027D1EF8F007EDE73 /* QuotesViewModel.swift in Sources */,
+				A058585627D34760007EDE73 /* LoginScreen.swift in Sources */,
+				A058585227D34439007EDE73 /* LoginViewModel.swift in Sources */,
 				A058580A27D1EA2F007EDE73 /* AnimeQuotesApp.swift in Sources */,
 				A058583F27D2070E007EDE73 /* PagingData.swift in Sources */,
 				A058581A27D1EA5F007EDE73 /* APIConstants.swift in Sources */,

@@ -11,6 +11,7 @@ struct QuoteScreen: View {
     
     @StateObject private var vm = QuotesViewModelImpl(
         quotesService: QuotesServiceImpl())
+    @EnvironmentObject private var authenticator: AuthenthicationViewModelImpl
     
     var body: some View {
         NavigationView {
@@ -29,6 +30,11 @@ struct QuoteScreen: View {
                 }
                 .listStyle(.plain)
                 .navigationTitle("Quotes")
+                .toolbar {
+                    Button("Log Out") {
+                        authenticator.updateValidation(success: false)
+                    }
+                }
             default:
                 EmptyView()
             }

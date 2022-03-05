@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct AnimeQuotesApp: App {
+    @StateObject var authentication = AuthenthicationViewModelImpl()
+    
     var body: some Scene {
         WindowGroup {
-            QuoteScreen()
+            if authentication.isValidated {
+                QuoteScreen()
+                    .environmentObject(authentication)
+            } else {
+                LoginScreen()
+                    .environmentObject(authentication)
+            }
         }
     }
 }
